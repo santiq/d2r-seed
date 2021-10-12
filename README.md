@@ -26,6 +26,7 @@ node index.js
 
 ## Roadmap to an actual map hack
 
-- [ ] Detect difficulty and area id 
+- [x] Detect Area ID
+- [X] Detect Difficulty ID
 - [ ] Call map api to get a map json or image
 - [ ] Draw revealed map over D2R window

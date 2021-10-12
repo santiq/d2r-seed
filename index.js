@@ -26,6 +26,13 @@ async function readMemoryBuffer (handle, address, size) {
     })
 }
 
+async function getDifficultyId(handle, modBaseAddr) {
+    const difficultyAddress = modBaseAddr + 0x1EB0ECC;
+    const _buffDifficulty = await readMemoryBuffer(handle, difficultyAddress, 8);
+    const difficulty = Number(_buffDifficulty.readInt16LE(0));
+    return difficulty;
+}
+
 async function getMapSeed(handle, startingAddress) {
     const buf = await readMemoryBuffer(handle, startingAddress, 8);
 
@@ -88,9 +95,11 @@ async function main() {
 
     const mapId = await getCurrentMapId(handle, startingAddress);
     const seedId = await getMapSeed(handle, startingAddress);
-    
+    const difficultyId = await getDifficultyId(handle, processInfo.modBaseAddr);    
+
     console.log("Map seed: " + seedId);
-    console.log("Current level id: " + mapId);
+    console.log("Current level ID: " + mapId);
+    console.log("Difficulty ID: ", difficultyId);   
 }
 
 const tickInterval = 1000 // milisecs
