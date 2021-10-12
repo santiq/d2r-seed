@@ -19,7 +19,7 @@ This program requires node-gyp, [see installation instructions here](https://git
 2. Run this script with
 
 ```
-npm run index.js
+node index.js
 ```
 
 3. Enjoy
