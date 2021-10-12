@@ -1,0 +1,20 @@
+{
+  "name": "d2mh",
+  "version": "1.0.0",
+  "description": "A simple script to read d2r map seed from memory",
+  "main": "index.js",
+  "dependencies": {
+    "memoryjs": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Diablo 2 Resurrected",
+    "d2r",
+    "maphack"
+  ],
+  "author": "Sam Quinn",
+  "license": "MIT"
+}
