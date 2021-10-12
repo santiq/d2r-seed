@@ -1,4 +1,6 @@
 const memoryjs = require('memoryjs');
+const lvls = require("./lvl.json");
+const difficulty = require("./difficulty.json");
 
 async function getProcessInfo() {
     const processName = "D2R.exe";
@@ -98,8 +100,8 @@ async function main() {
     const difficultyId = await getDifficultyId(handle, processInfo.modBaseAddr);    
 
     console.log("Map seed: " + seedId);
-    console.log("Current level ID: " + mapId);
-    console.log("Difficulty ID: ", difficultyId);   
+    console.log("Current level ID: " + mapId, ` (${lvls[mapId]})`);
+    console.log("Difficulty ID: ", difficultyId, ` (${difficulty[difficultyId]})`);   
 }
 
 const tickInterval = 1000 // milisecs
