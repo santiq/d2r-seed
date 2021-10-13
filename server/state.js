@@ -123,10 +123,8 @@ async function watchGameState(socket) {
   setInterval(async () => {
       const gameState = getGameState();
       if(gameState) {
-        console.log("Game state found");
         const { seedId, mapId, difficultyId } = await getGameStateFromMemory();
         // @TODO Implement a better change state detection
-        console.log(gameState)
         if (state.seedId !== seedId || state.mapId !== mapId || state.difficultyId !== difficultyId) {
             console.log("Game state changed, emitting socket update");
             socket.emit("state_update", {

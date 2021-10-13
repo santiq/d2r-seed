@@ -28,5 +28,6 @@ node index.js
 
 - [x] Detect Area ID
 - [X] Detect Difficulty ID
-- [ ] Call map api to get a map json or image
-- [ ] Draw revealed map over D2R window
+- [X] Call map api to get a map json or image
+- [ ] Draw revealed map over D2R window 
+    - Needs electron.js

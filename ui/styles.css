@@ -2,6 +2,10 @@
     transform: rotateY(0deg) rotate(45deg);
 }
 
+body {
+    background-color:black;
+}
+
 img {
     width: 1000px;
     object-fit: contain;
