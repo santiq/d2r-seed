@@ -1,0 +1,8 @@
+.rotate {
+    transform: rotateY(0deg) rotate(45deg);
+}
+
+img {
+    width: 1000px;
+    object-fit: contain;
+}
