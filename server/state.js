@@ -28,7 +28,7 @@ async function readMemoryBuffer (handle, address, size) {
 }
 
 async function getDifficultyId(handle, modBaseAddr) {
-    const difficultyAddress = modBaseAddr + 0x1EB0ECC;
+    const difficultyAddress = modBaseAddr + 0x1EBAECC;
     const _buffDifficulty = await readMemoryBuffer(handle, difficultyAddress, 8);
     const difficulty = Number(_buffDifficulty.readInt16LE(0));
     return difficulty;
@@ -93,7 +93,7 @@ async function getGameStateFromMemory() {
         const processInfo = await getProcessInfo();
 
         const handle = processInfo.handle;
-        const startingAddress = processInfo.modBaseAddr + 0x2055E40;
+        const startingAddress = processInfo.modBaseAddr + 0x205FE40;
     
         const mapId = await getCurrentMapId(handle, startingAddress);
         const seedId = await getMapSeed(handle, startingAddress);
@@ -124,6 +124,7 @@ async function watchGameState(socket) {
       const gameState = getGameState();
       if(gameState) {
         const { seedId, mapId, difficultyId } = await getGameStateFromMemory();
+        process.env.DEBUG && console.log("Game state: ", gameState);
         // @TODO Implement a better change state detection
         if (state.seedId !== seedId || state.mapId !== mapId || state.difficultyId !== difficultyId) {
             console.log("Game state changed, emitting socket update");
