@@ -5,6 +5,9 @@
 body {
     background-color:black;
 }
+.container {
+    margin-top: 50px;
+}
 
 img {
     width: 1000px;

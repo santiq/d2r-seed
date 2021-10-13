@@ -118,7 +118,7 @@ function getGameState() {
 }
 
 async function watchGameState(socket) {
-  const tickInterval = 2000 // milisecs
+  const tickInterval = 200 // milisecs
   console.log("watching game state");
   setInterval(async () => {
       const gameState = getGameState();
