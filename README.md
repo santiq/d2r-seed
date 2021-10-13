@@ -1,8 +1,5 @@
-# Diablo II Resurrect map seed revelear
+# Diablo II Resurrect map seed revelear + Web UI for Maphack
 
-Use this script to get the map seed in Diablo 2 Resurrected 
-
-Works on windows, both online (battle.net) and offline
 
 ## Instalation
 
@@ -22,7 +19,9 @@ This program requires node-gyp, [see installation instructions here](https://git
 node index.js
 ```
 
-3. Enjoy
+3. Open your browser and visit http://localhost:3002
+
+4. Enjoy
 
 ## Roadmap to an actual map hack
 
