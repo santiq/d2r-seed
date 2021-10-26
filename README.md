@@ -1,4 +1,4 @@
-**DEPRECATED**
+# DEPRECATED
 
 Use "D2R Assist" instead
 
@@ -7,10 +7,10 @@ Only use this repo to get inspiration on how to read memory using node.js in win
 
 -------------------
 
-# Diablo II Resurrect map seed revelear + Web UI for Maphack
+## Diablo II Resurrect map seed revelear + Web UI for Maphack
 
 
-## Instalation
+### Instalation
 
 ``` 
 npm install
